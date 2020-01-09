@@ -42,7 +42,7 @@ public:
 };
 ```
 
-![1578551367119](C:\Users\wwwzh\AppData\Roaming\Typora\typora-user-images\1578551367119.png)
+![avator](image/1.png)
 
 **2. 删除链表的倒数第N个节点**
 
@@ -71,7 +71,7 @@ public:
     };
 ```
 
-![1578551419143](C:\Users\wwwzh\AppData\Roaming\Typora\typora-user-images\1578551419143.png)
+![avator](image/2.png)
 
 **3. 旋转链表**
 
@@ -108,5 +108,5 @@ public:
 };
 ```
 
-![1578551495778](C:\Users\wwwzh\AppData\Roaming\Typora\typora-user-images\1578551495778.png)
+![avator](image/2.png)
 
