@@ -188,3 +188,7 @@ SELECT *
  ORDER BY regist_date DESC;
 ```
 
+
+
+总结 : 本次任务中学习使用select where ,运算符, count sum avg等聚合函数，并练习使用，向着成为一个合格的sql boy前进！
+
