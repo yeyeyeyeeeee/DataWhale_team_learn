@@ -174,13 +174,13 @@ SELECT product_type, SUM(sale_price) AS "sum", SUM(purchase_price) AS "sum"
  WHERE SUM(sale_price) > SUM(purchase_price)*1.5;
 ```
 
-![图片](https://github.com/PureBuckwheat/DataWhale_team_learn/blob/master/wonderful-sql/pic/ch02.09test27.png)
+![图片](https://github.com/PureBuckwheat/DataWhale_team_learn/blob/master/wonderful-sql/pic/ch02.08test26.png)
 
 ### 2.7
 
 此前我们曾经使用SELECT语句选取出了product（商品）表中的全部记录。当时我们使用了 `ORDER BY` 子句来指定排列顺序，但现在已经无法记起当时如何指定的了。请根据下列执行结果，思考 `ORDER BY` 子句的内容。
 
-![图片](http://www.blsc.cn/)
+![图片](https://github.com/PureBuckwheat/DataWhale_team_learn/blob/master/wonderful-sql/pic/ch02.09test27.png)
 
 ```sql
 SELECT *
