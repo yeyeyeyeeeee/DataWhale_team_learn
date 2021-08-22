@@ -172,7 +172,7 @@ product_id | product_name | product_type | sale_price | avg_sale_price
 
 ```sql
 -- 创建视图
-CREATE VIEW AvgPriceByType (product_name, sale_price, regist_date)
+CREATE VIEW AvgPriceByType (product_id, product_name, product_type, sale_price, avg_sale_price)
 AS
 SELECT product_id, product_name, product_type, sale_price, 
 (SELECT AVG(sale_price)
