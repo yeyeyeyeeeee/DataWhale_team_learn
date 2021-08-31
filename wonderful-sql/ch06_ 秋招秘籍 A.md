@@ -14,34 +14,7 @@
 | 4  | Max   | 90000  | 1            |
 +----+-------+--------+--------------+
 ```
-```sql
--- 创建数据库
-USE wonderful_sql;
-CREATE TABLE Employee(
- Id INT(11) NOT NULL,
- Name VARCHAR(50) NOT NULL,
- Salary INT(11) NOT NULL,
- DepartmentId INT(11) NOT NULL,
- PRIMARY KEY(Id)
-);
-```
-
-![图片](.\pic\task06-1.jpg)
-
-```sql
--- 插入数据
-INSERT INTO Employee VALUES ('1', 'Joe', '70000', '1');
-INSERT INTO Employee VALUES ('2', 'Henry', '90000', '2');
-INSERT INTO Employee VALUES ('3', 'Sam', '60000', '2');
-INSERT INTO Employee VALUES ('4', 'Max', '90000', '1');
-```
-
-![图片](.\pic\task06-2.jpg)
-
-
-
 创建Department 表，包含公司所有部门的信息。
-
 ```plain
 +----+----------+
 | Id | Name     |
@@ -50,22 +23,7 @@ INSERT INTO Employee VALUES ('4', 'Max', '90000', '1');
 | 2  | Sales    |
 +----+----------+
 ```
-```sql
--- 创建数据库
-CREATE TABLE Department(
- Id INT(11) NOT NULL,
- Name VARCHAR(50) NOT NULL,
- PRIMARY KEY(Id)
-);
--- 插入数据
-INSERT INTO Department VALUES ('1', 'IT');
-INSERT INTO Department VALUES ('2', 'Sales');
-```
-
-![图片](.\pic\task06-3.jpg)
-
 编写一个 SQL 查询，找出每个部门工资最高的员工。例如，根据上述给定的表格，Max 在 IT 部门有最高工资，Henry 在 Sales 部门有最高工资。
-
 ```plain
 +------------+----------+--------+
 | Department | Employee | Salary |
@@ -76,13 +34,9 @@ INSERT INTO Department VALUES ('2', 'Sales');
 ```
 
 ```sql
-SELECT Department.Name as Department, Employee.Name as Employee, MAX(Employee.Salary) as Salary
-  FROM Employee 
- LEFT JOIN Department ON Employee.DepartmentId = Department.Id 
- GROUP BY Employee.DepartmentId;
 ```
 
-![图片](.\pic\task06-4.jpg)
+
 
 # 练习二: 换座位（难度：中等）
 
@@ -109,10 +63,7 @@ SELECT Department.Name as Department, Employee.Name as Employee, MAX(Employee.Sa
 |    5    | Jeames  |
 +---------+---------+
 ```
-
-
 假如数据输入的是上表，则输出结果如下：
-
 ```plain
 +---------+---------+
 |    id   | student |
@@ -253,7 +204,7 @@ SELECT Department.Name as Department, Employee.Name as Employee, MAX(Employee.Sa
 
 uid是用户id；action的值为：“show”， “answer”， “skip”；当action是"answer"时，answer_id不为空，相反，当action是"show"和"skip"时为空（null）；q_num是问题的数字序号。
 
-写一条sql语句找出回答率最高的问题。
+写一条sql语句找出回答率最高的 `question_id`。
 
 **举例：**
 
@@ -268,7 +219,7 @@ uid是用户id；action的值为：“show”， “answer”， “skip”；�
 
 **输出**
 
-|survey_log  |
+|question_id  |
 |:----|
 |285      |
 
@@ -282,7 +233,7 @@ uid是用户id；action的值为：“show”， “answer”， “skip”；�
 
 # 练习八：各部门前3高工资的员工（难度：中等）
 
-将项目7中的employee表清空，重新插入以下数据（其实是多插入5,6两行）：
+将练习一中的 `employee` 表清空，重新插入以下数据（也可以复制练习一中的 `employee` 表，再插入第5、第6行数据）：
 
 ```plain
 +----+-------+--------+--------------+
@@ -381,7 +332,6 @@ Users 表存所有用户。每个用户有唯一键 Users_Id。Banned 表示这
 | 2013-10-03 |       0.50        |
 +------------+-------------------+
 ```
-1
 
 
 
